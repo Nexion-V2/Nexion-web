@@ -3,12 +3,41 @@
     "port": 5000
   },
   "db": {
-    "url": "mongodb+srv://tarikulislam3639:TarikulislaM2002@cluster0.lb7vp.mongodb.net/ChatFly?retryWrites=true&w=majority&appName=Cluster0"
+    "url": "mongodb+srv://tarikulislam3639:TarikulislaM2002@cluster0.lb7vp.mongodb.net/Nexion?retryWrites=true&w=majority&appName=Cluster0"
   },
   "jwt": {
     "secret": "dev-secret-key-not-for-production"
   },
   "cors": {
-    "origin": ["http://localhost:3000", "http://localhost:5173", "http://localhost:8080"]
+    "origin": [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "http://localhost:8080"
+    ]
+  },
+  "cloudinary": {
+    "cloud_name": "dt9jpmqwf",
+    "api_key": "229292613465955",
+    "api_secret": "wAvEaAMctKmURy68ndYpZ3xqnmc"
+  },
+  "email": {
+    "service": "Gmail",
+    "host": "smtp.gmail.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "tarikulislam3639@gmail.com",
+      "pass": "epbwkloaqtfjbxxr"
+    }
+  },
+  "github": {
+    "clientId": "Ov23liPjePP7brXOlU8g",
+    "clientSecret": "9d54e660f042a9ac09bc7f964e5c1a978ae4fdc0",
+    "redirectUri": "http://localhost:5000/auth/github-callback"
+  },
+  "google": {
+    "clientId": "536859800009-veciplpk6sp57ooa43ta9hrrtdg8aqne.apps.googleusercontent.com",
+    "clientSecret": "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",
+    "redirectUri": "http://localhost:5000/auth/google-callback"
   }
 }
