@@ -55,14 +55,34 @@ Nexion is an innovative web-based platform that seamlessly integrates a dynamic 
 
 ## 📷 Screenshots
 
-> Replace these placeholders with actual screenshots  
+These screenshots showcase different UIs and features of the project.  
 
+### Login Page
 ![Login Page](./screenshots/login.png)
-![Profile](./screenshots/profile.png)  
+
+### Profile
+![Profile](./screenshots/profile.png)
+
+### Chat UI
 ![Chat UI](./screenshots/chat.png)
+
+### Bots UI
 ![Bots UI](./screenshots/bots.png)
+
+<!-- Classroom UI (commented out) -->
 <!-- ![Classroom](./screenshots/classroom.png) -->
-![Calendar](./screenshots/calendar.png)  
+
+### Calendar
+![Calendar](./screenshots/calendar.png)
+
+---
+
+> You can add short descriptions under each image to help readers understand the feature shown. For example:
+> - **Login Page:** User login form
+> - **Profile:** Profile view and edit options
+> - **Chat UI:** Messaging interface
+> - **Bots UI:** Bot features and controls
+> - **Calendar:** Class/event view
 
 ---
 
