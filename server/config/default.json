@@ -59,5 +59,20 @@
     "clientId": "536859800009-veciplpk6sp57ooa43ta9hrrtdg8aqne.apps.googleusercontent.com",
     "clientSecret": "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",
     "redirectUri": "http://localhost:5000/auth/google-callback"
+  },
+  "huggingface": {
+    "apiKey": "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"
+  },
+  "gemini": {
+    "apiKey": "AIzaSyD3lV0eJq5pUGbCdwmA7GiQyhb9LRJIfY4"
+  },
+  "openRouter": {
+    "apiKey": "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"
+  },
+  "cloudconvert": {
+    "apiKey": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODBkNTQ4NWYzZmY2YzA1YjVlNzdjOTcxZjYxYzdjMDNhNzU1ZmFjNzI2YmI4MjliYWYyNzRjNmJiMzdiM2E4NmJhMmViYjUyMGM2YjhkYjMiLCJpYXQiOjE3NjMxNDQ0MjQuMjMyOTA3LCJuYmYiOjE3NjMxNDQ0MjQuMjMyOTA4LCJleHAiOjQ5MTg4MTgwMjQuMjI2MTUxLCJzdWIiOiI1OTcxNjE1MSIsInNjb3BlcyI6WyJ1c2VyLnJlYWQiLCJ1c2VyLndyaXRlIiwidGFzay5yZWFkIiwidGFzay53cml0ZSIsIndlYmhvb2sucmVhZCIsIndlYmhvb2sud3JpdGUiXX0.lbLFQB24350_3zQtLU6ODYITH_ADgvYnG2_9qmnZ1EsBgxJ2r_H9tIxpfqK2Mc3llkR8NgdjHaO81jelwGLunkaNpRcSO9WLr9208RgVOmoxbHqOoKz3DSZWdShJaLg18IwEcSXgMoo8LrPBm6DXKhV6bwDAXYRY7gIyjFG7JJxw5er5IgC1unFz8yKp3E3hIS8kykUu6YvZEwv4QReRnvNO509YJaHctGim546fl45BoVblhp67XnBKQthX1rfLAwaFSMWRMB3UXtUnk6uy8E8DmkMObBfSrpHKndgkVNCWAdJambZZyd4tCfh16o6oO4HjGRlfoNqVD-A0_sPLT0Tvc1VE10Pe8bOGK1NHib7Ifcs63eWEQ7cVOPjzgRRZ2OfAFOAmq5Onc2T4XMqVV3miOdRrtuHwpzxI_GYne7vTZnXQtx1DczWVG1HdSMtC2j-ZOf0wRpo9GlPBEfYKMk8frQrVhy4k9fTJlaYTuRX_1krcN_YATzoyRsneQVBphEDZw2UDRhhfP9lsvr8Z7xFbd1QCakSME7GiKO-m_u7gamZPqJjsBROaUjvyScgSBNaA2Hu7IhvFVJUhm1-NKP48HwE2Pmzu7mGeTQc0FdFueu4BHGwqszO3e9F4mZuOVClE4NMou3xJ1JNpsYS0ioFRZoqwoblqzaOU3CiJPLo"
+  },
+  "convertapi": {
+    "apiKey": "HloSIJgsTmx0vNfPG1O9REOYA5Du0pTO"
   }
 }

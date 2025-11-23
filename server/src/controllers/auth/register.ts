@@ -1,17 +1,17 @@
 import { Request, Response } from "express";
 import User from "@/models/User";
-import bcrypt from "bcryptjs";
+import { getAvatarUrl } from "@/hooks/useAvatar";
 
 // Register user
 export const register = async (req: Request, res: Response) => {
   try {
-    const { username, email, password } = req.body;
+    const { name, email, password } = req.body;
 
     // Validation
-    if (!username || !email || !password) {
+    if (!name || !email || !password) {
       return res.status(400).json({
         success: false,
-        message: "Please provide username, email, and password",
+        message: "Please provide name, email, and password",
       });
     }
 
@@ -24,14 +24,13 @@ export const register = async (req: Request, res: Response) => {
       });
     }
 
-    // TODO: Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     // TODO: Create user in database
     await User.create({
-      username,
+      name,
       email,
-      password: hashedPassword,
+      username: email.split("@")[0], // Simple username from email
+      avatar: getAvatarUrl(email),
+      password, 
     });
 
     // For now, return success response

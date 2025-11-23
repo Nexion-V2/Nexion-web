@@ -1,14 +1,26 @@
 // -------------------- Types & Interfaces --------------------
 export interface IUser {
   id: string;
+  name: string;
+  username: string;
   email: string;
-  username?: string;
+  password?: string;
   avatar?: string;
+  status?: "online" | "offline" | "away" | "busy";
+  bio?: string;
+  friends?: string[];
+  blockedUsers?: string[];
+  lastSeen?: Date;
+  otp?: string;
+  otpExpires?: Date;
+  otpVerified?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface AuthContextType {
   user: IUser | null;
-  token: string | null;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
   login: (
     email: string,
     password: string,
@@ -22,38 +34,6 @@ export interface AuthContextType {
   logout: () => void;
   isLoading: boolean;
   isAuthenticated: boolean;
-}
-
-export interface IVerifyUser {
-  id: string;
-  username: string;
-  email: string;
-  avatar?: string | null;
-}
-
-export interface IVerifyResponse {
-  success: boolean;
-  message: string;
-  data: {
-    user: IVerifyUser;
-  };
-}
-
-export interface ILoginResponseUser {
-  id: string;
-  email: string;
-  username: string;
-}
-export interface ILoginResponse {
-  success: boolean;
-  message: string;
-  data: {
-    token: string;
-    user: ILoginResponseUser;
-  };
-}
-
-export interface ISignupResponse {
-  success: boolean;
-  message: string;
+  loginWithGoogle: () => void;
+  loginWithGithub: () => void;
 }

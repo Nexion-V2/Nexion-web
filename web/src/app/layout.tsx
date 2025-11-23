@@ -1,13 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import RegisterServiceWorker from "@/components/core/RegisterServiceWorker";
 import { metadata, viewport } from "@/components/core/metadata";
 // import AppProtection from "@/components/core/AppProtection";
 // import RouteGuard from "@/components/core/RouteGuard";
-import { SocketProvider } from "@/context/SocketContext";
-import { AuthProvider } from "@/context/AuthContext";
-import { LeftPanelDataProvider } from "@/context/LeftPanelDataContext";
-import { PanelProvider } from "@/context/PanelContext";
-import { Toaster } from "sonner";
+import { Geist, Geist_Mono } from "next/font/google";
+import Providers from "@/app/Providers";
 import React from "react";
 import "./globals.css";
 
@@ -38,7 +34,7 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="ChatFly" />
+        <meta name="apple-mobile-web-app-title" content="Nexion" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-TileColor" content="#0f172a" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -49,16 +45,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Toaster position="top-center" richColors />
         <RegisterServiceWorker />
         {/* <AppProtection /> */}
-        <AuthProvider>
-          <SocketProvider>
-            <PanelProvider>
-              <LeftPanelDataProvider>{children}</LeftPanelDataProvider>
-            </PanelProvider>
-          </SocketProvider>
-        </AuthProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

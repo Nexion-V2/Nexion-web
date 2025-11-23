@@ -5,13 +5,16 @@ import { Server } from "socket.io";
 import { setupSocket } from "./sockets/index";
 import { connectDB } from "./config/db";
 import routes from "./routes";
-import { requestLogger } from "./utils/middleware";
+import { requestLogger, errorHandler } from "@/utils/middleware";
 import config from "config";
+import cookieParser from 'cookie-parser';
 import fs from "fs";
 
 const APP = express();
+APP.use(cookieParser());
 const PORT = config.get("app.port");
 const HOST = config.get("app.host");
+
 const isProduction = process.env.NODE_ENV === "production";
 
 let server;
@@ -61,13 +64,16 @@ APP.use("/api", routes);
 
 APP.get("/", (req: Request, res: Response) => {
   res.json({
-    message: "Welcome to ChatFly API",
+    message: "Welcome to Nexion API",
     app: config.get("app.name"),
     version: config.get("app.version"),
     environment: process.env.NODE_ENV,
     protocol: protocol.toUpperCase(),
   });
 });
+
+// Error handling middleware should be last
+APP.use(errorHandler); // Centralized error handling
 
 server.listen(PORT, () => {
   console.log(

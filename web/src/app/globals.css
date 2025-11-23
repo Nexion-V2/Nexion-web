@@ -7,7 +7,10 @@
 /* Theme variables */
 @theme{
   --breakpoint-xs: 400px;
-  --color-primary: #131313;
+  --color-nexion-primary: #131313;
+  --color-nexion-primary-foreground: #2c2e34;
+  --color-nexion-secondary: #161616;
+  --color-nexion-tertiary: #2e333d;
 }
 
 @theme inline {
@@ -124,6 +127,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --scrollbar-thumb: #262629;
 }
 
 /* Base layer */
@@ -182,4 +186,18 @@ input:-webkit-autofill:active {
 .dark ::selection {
   background-color: #2563eb; /* Tailwind blue-600 */
   color: #ffffff;
+}
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  background-color: transparent;
+  border: none;
+}
+
+input[type="time"] {
+  color-scheme: dark;
 }
