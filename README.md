@@ -57,10 +57,12 @@ Nexion is an innovative web-based platform that seamlessly integrates a dynamic 
 
 > Replace these placeholders with actual screenshots  
 
-![Login Page](./screenshots/login.png)  
-![Dashboard](./screenshots/dashboard.png)  
-![Chat UI](./screenshots/chat.png)  
-![Classroom](./screenshots/classroom.png)  
+![Login Page](./screenshots/login.png)
+![Profile](./screenshots/profile.png)  
+![Chat UI](./screenshots/chat.png)
+![Bots UI](./screenshots/bots.png)
+<!-- ![Classroom](./screenshots/classroom.png) -->
+![Calendar](./screenshots/calendar.png)  
 
 ---
 
